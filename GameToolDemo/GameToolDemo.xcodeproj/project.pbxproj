@@ -14,7 +14,23 @@
 		4E3C19842B19B9F1009A06E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3C19832B19B9F1009A06E1 /* Assets.xcassets */; };
 		4E3C19872B19B9F1009A06E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3C19852B19B9F1009A06E1 /* LaunchScreen.storyboard */; };
 		4E3C198A2B19B9F1009A06E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C19892B19B9F1009A06E1 /* main.m */; };
+		4EBEEB602B1DED4100F710A0 /* GameToolSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBEEB5E2B1DE53900F710A0 /* GameToolSDK.framework */; };
+		4EBEEB612B1DED4100F710A0 /* GameToolSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBEEB5E2B1DE53900F710A0 /* GameToolSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EBEEB622B1DED4100F710A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4EBEEB612B1DED4100F710A0 /* GameToolSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4E3C19742B19B9F0009A06E1 /* GameToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +45,10 @@
 		4E3C19862B19B9F1009A06E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E3C19882B19B9F1009A06E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E3C19892B19B9F1009A06E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EBEEB5E2B1DE53900F710A0 /* GameToolSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GameToolSDK.framework; sourceTree = "<group>"; };
+		544BA827911D84C9AF7A8155 /* Pods-GameToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameToolDemo.debug.xcconfig"; path = "Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6388D2CEDFD8847680108C22 /* Pods_GameToolDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameToolDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0C5E74391A345D510E8871 /* Pods-GameToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameToolDemo.release.xcconfig"; path = "Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBEEB602B1DED4100F710A0 /* GameToolSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +68,8 @@
 			children = (
 				4E3C19762B19B9F0009A06E1 /* GameToolDemo */,
 				4E3C19752B19B9F0009A06E1 /* Products */,
+				820EA0530918F336FA5FD15D /* Pods */,
+				C94650C5A68754CC64CDDF0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +84,7 @@
 		4E3C19762B19B9F0009A06E1 /* GameToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4EBEEB5E2B1DE53900F710A0 /* GameToolSDK.framework */,
 				4E3C19772B19B9F0009A06E1 /* AppDelegate.h */,
 				4E3C19782B19B9F0009A06E1 /* AppDelegate.m */,
 				4E3C197A2B19B9F0009A06E1 /* SceneDelegate.h */,
@@ -76,6 +100,23 @@
 			path = GameToolDemo;
 			sourceTree = "<group>";
 		};
+		820EA0530918F336FA5FD15D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				544BA827911D84C9AF7A8155 /* Pods-GameToolDemo.debug.xcconfig */,
+				7D0C5E74391A345D510E8871 /* Pods-GameToolDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C94650C5A68754CC64CDDF0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6388D2CEDFD8847680108C22 /* Pods_GameToolDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E3C198D2B19B9F1009A06E1 /* Build configuration list for PBXNativeTarget "GameToolDemo" */;
 			buildPhases = (
+				8F2290526E3F43E9EBA02474 /* [CP] Check Pods Manifest.lock */,
 				4E3C19702B19B9F0009A06E1 /* Sources */,
 				4E3C19712B19B9F0009A06E1 /* Frameworks */,
 				4E3C19722B19B9F0009A06E1 /* Resources */,
+				4EBEEB622B1DED4100F710A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +183,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F2290526E3F43E9EBA02474 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameToolDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E3C19702B19B9F0009A06E1 /* Sources */ = {
@@ -287,12 +355,17 @@
 		};
 		4E3C198E2B19B9F1009A06E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544BA827911D84C9AF7A8155 /* Pods-GameToolDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2YZT35392G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GameToolDemo",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameToolDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,12 +388,17 @@
 		};
 		4E3C198F2B19B9F1009A06E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0C5E74391A345D510E8871 /* Pods-GameToolDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2YZT35392G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GameToolDemo",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameToolDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,6 +406,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
