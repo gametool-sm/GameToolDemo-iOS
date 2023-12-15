@@ -4,9 +4,7 @@
 target 'GameToolDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-#    pod 'GTBaseComponent'
-#    pod 'SMEncryption'
-#    pod 'GameToolSDK'
+    pod 'GameToolSDK'
 
   # Pods for GameToolDemo
 
