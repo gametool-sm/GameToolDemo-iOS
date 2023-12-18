@@ -29,12 +29,20 @@ static NSString *appKey = @"f975a83744de431cdc300dabff7b8179";
     
     BOOL openDebug = YES;
     GTSDKStyles style = [[NSUserDefaults standardUserDefaults] integerForKey:GTSDKStyleKey];
-    [self initSDK:appKey style:style openDebug:openDebug];
+//    [self initSDK:appKey style:style openDebug:openDebug];
     [self setUIWithStyle:style];
     
     
 }
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BOOL openDebug = YES;
+        GTSDKStyles style = [[NSUserDefaults standardUserDefaults] integerForKey:GTSDKStyleKey];
+        [self initSDK:appKey style:style openDebug:openDebug];
+    });
 
+}
 -(void)setUIWithStyle:(GTSDKStyles)style{
     [self addLeftPadding:self.appKeyTextField];
     [self addLeftPadding:self.userIdTextField];

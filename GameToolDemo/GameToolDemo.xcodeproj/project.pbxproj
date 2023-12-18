@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		45B9322752017446E7CCC029 /* Pods_GameToolDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388D2CEDFD8847680108C22 /* Pods_GameToolDemo.framework */; };
 		4E3C19792B19B9F0009A06E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C19782B19B9F0009A06E1 /* AppDelegate.m */; };
-		4E3C197C2B19B9F0009A06E1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C197B2B19B9F0009A06E1 /* SceneDelegate.m */; };
 		4E3C197F2B19B9F0009A06E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C197E2B19B9F0009A06E1 /* ViewController.m */; };
 		4E3C19822B19B9F0009A06E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E3C19802B19B9F0009A06E1 /* Main.storyboard */; };
 		4E3C19842B19B9F1009A06E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3C19832B19B9F1009A06E1 /* Assets.xcassets */; };
@@ -34,8 +33,6 @@
 		4E3C19742B19B9F0009A06E1 /* GameToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3C19772B19B9F0009A06E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E3C19782B19B9F0009A06E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4E3C197A2B19B9F0009A06E1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		4E3C197B2B19B9F0009A06E1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4E3C197D2B19B9F0009A06E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4E3C197E2B19B9F0009A06E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4E3C19812B19B9F0009A06E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,8 +80,6 @@
 			children = (
 				4E3C19772B19B9F0009A06E1 /* AppDelegate.h */,
 				4E3C19782B19B9F0009A06E1 /* AppDelegate.m */,
-				4E3C197A2B19B9F0009A06E1 /* SceneDelegate.h */,
-				4E3C197B2B19B9F0009A06E1 /* SceneDelegate.m */,
 				4E3C197D2B19B9F0009A06E1 /* ViewController.h */,
 				4E3C197E2B19B9F0009A06E1 /* ViewController.m */,
 				4E3C19802B19B9F0009A06E1 /* Main.storyboard */,
@@ -125,8 +120,8 @@
 				4E3C19712B19B9F0009A06E1 /* Frameworks */,
 				4E3C19722B19B9F0009A06E1 /* Resources */,
 				4EBEEB622B1DED4100F710A0 /* Embed Frameworks */,
-				8F9F776BB189778F8E6272D5 /* [CP] Embed Pods Frameworks */,
-				3EA560F7CE81F336861F06B6 /* [CP] Copy Pods Resources */,
+				5BC87A3A6208E456820120D2 /* [CP] Embed Pods Frameworks */,
+				5F848F4B91E4175653617634 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +178,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3EA560F7CE81F336861F06B6 /* [CP] Copy Pods Resources */ = {
+		5BC87A3A6208E456820120D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F848F4B91E4175653617634 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,23 +234,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F9F776BB189778F8E6272D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameToolDemo/Pods-GameToolDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,7 +244,6 @@
 				4E3C197F2B19B9F0009A06E1 /* ViewController.m in Sources */,
 				4E3C19792B19B9F0009A06E1 /* AppDelegate.m in Sources */,
 				4E3C198A2B19B9F1009A06E1 /* main.m in Sources */,
-				4E3C197C2B19B9F0009A06E1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
