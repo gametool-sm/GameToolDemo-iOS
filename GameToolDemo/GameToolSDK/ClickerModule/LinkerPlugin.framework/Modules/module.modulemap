@@ -1,0 +1,6 @@
+framework module LinkerPlugin {
+  umbrella header "LinkerPlugin.h"
+
+  export *
+  module * { export * }
+}

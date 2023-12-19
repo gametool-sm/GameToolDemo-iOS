@@ -1,0 +1,78 @@
+//
+//  PrefixHeader.pch
+//  GTSDK
+//
+//  Created by 童威 on 2023/6/16.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "GTSDKUtils.h"
+#import "GTSDKConfig.h"
+#import "GTMultiplyingModel.h"
+#import "GTThemeManager.h"
+
+/**
+ 之后转移到base库pch中，先集中写在这儿
+ **/
+#import <Masonry/Masonry.h>
+#import <Lottie/Lottie.h>
+#import "LOTAnimationView+GTBundle.h"
+#import <YYKit/YYKit.h>
+#import "YYImage+GTBundle.h"
+#import <AFNetworking/AFNetworking.h>
+#import <UIView+Toast.h>
+#import "UIColor+Util.h"
+#import "UIFont+Custom.h"
+#import "NSData+Custom.h"
+#import "NSDate+Custom.h"
+#import "NSString+Custom.h"
+#import <SMEncryption/GTSDK_SECURITY_DEFINE_HEADER.h>
+#import <SMEncryption/SMCommonUtils.h>
+#import <SMEncryption/SMEncryptUtil.h>
+//#import "SMEncryptionCommon.h"
+//#import "SMEncryptUtil.h"
+//#import "SMCommonUtils.h"
+#import "GTNetworkManager.h"
+#import "GTSDKAPI.h"
+
+/**
+ 埋点相关API
+ */
+
+#import "SMDurationEventReport.h"
+
+#import "GTDataConfig.h"
+#import "GTDataTimeCounter.h"
+
+/**
+ UI宏
+ */
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define WIDTH(view)   view.frame.size.width
+#define HEIGHT(view)  view.frame.size.height
+
+#define CENTERX(view)   view.center.x
+#define CENTERY(view)   view.center.y
+
+//安全区域
+#define SAFE_AREA_TOP      [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.top
+#define SAFE_AREA_BOTTOM   [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.bottom
+#define SAFE_AREA_LEFT     ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft ? 0 : ([UIApplication sharedApplication].windows.firstObject.safeAreaInsets.left == 0 ? 0 : [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.left - 11))
+
+#define SAFE_AREA_RIGHT    ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeRight ? 0: ([UIApplication sharedApplication].windows.firstObject.safeAreaInsets.right == 0 ? 0 : [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.right - 11))
+//适配倍率
+#define WIDTH_RATIO (SCREEN_WIDTH > SCREEN_HEIGHT ? SCREEN_HEIGHT : SCREEN_WIDTH)/375
+//国际化
+#define localString(a) NSLocalizedStringFromTableInBundle(a, nil, [[GTThemeManager share] getGTSDKBundle], nil)
+//弱引用
+#define WeakObj(obj) autoreleasepool{} __weak typeof(obj) obj##Weak = obj;
+//强引用
+#define StrongObj(obj) autoreleasepool{} __strong typeof(obj) obj = obj##Weak;
+//延时宏
+#define DELAYED(time, block) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), block)
+
+#endif /* PrefixHeader_pch */
