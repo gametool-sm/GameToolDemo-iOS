@@ -11,7 +11,8 @@
 static NSString *GTSDKStyleKey = @"GTSDKStyleKey";
 //static NSString *appKey = @"Your appKey";
 
-static NSString *appKey = @"f975a83744de431cdc300dabff7b8179";
+//static NSString *appKey = @"f975a83744de431cdc300dabff7b8179";
+static NSString *appKey = @"686cdc96abd2249024df34af729dbbcd";
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *appKeyTextField;
@@ -31,6 +32,7 @@ static NSString *appKey = @"f975a83744de431cdc300dabff7b8179";
     GTSDKStyles style = [[NSUserDefaults standardUserDefaults] integerForKey:GTSDKStyleKey];
     [self initSDK:appKey style:style openDebug:openDebug];
     [self setUIWithStyle:style];
+    
     
     
 }
