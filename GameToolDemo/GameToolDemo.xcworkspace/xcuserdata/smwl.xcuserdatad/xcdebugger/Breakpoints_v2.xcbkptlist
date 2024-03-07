@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C65519F1-1544-4CA5-AFDC-15AE22865223"
+   type = "0"
+   version = "2.0">
+<<<<<<< HEAD
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04423D3B-6485-466F-8845-2A83880120B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameToolDemo/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-initSDK:style:openDebug:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "04423D3B-6485-466F-8845-2A83880120B5 - 358fc2f2758b386e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[ViewController initSDK:style:openDebug:]_block_invoke_2"
+                  moduleName = "GameToolDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smwl/Desktop/GameToolDemo-iOS/GameToolDemo/GameToolDemo/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "04423D3B-6485-466F-8845-2A83880120B5 - 358fc2f2758b386e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[ViewController initSDK:style:openDebug:]_block_invoke_2"
+                  moduleName = "GameToolDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smwl/Desktop/GameToolDemo-iOS/GameToolDemo/GameToolDemo/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+=======
+>>>>>>> 0b95d3bb55bac04523419aaa383ea71912c817ad
+</Bucket>
